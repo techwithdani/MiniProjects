@@ -1,7 +1,9 @@
+import Counter from "./projects/counter/Counter";
+
 function App() {
   return (
     <>
-      <h1>React Projects</h1>
+      <Counter />
     </>
   );
 }
