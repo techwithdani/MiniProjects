@@ -1,9 +1,9 @@
-import Counter from "./projects/counter/Counter";
+import Toggle from "./projects/toggle/Toggle";
 
 function App() {
   return (
     <>
-      <Counter />
+      <Toggle />
     </>
   );
 }
