@@ -1,7 +1,27 @@
 import { useState } from "react";
+import Button from "./Button";
 
 const Counter = () => {
   const [counter, setCounter] = useState(0);
+
+  const increment = () => {
+    setCounter(counter + 1);
+  };
+  const increment2 = () => {
+    setCounter(counter + 2);
+  };
+
+  const decrement2 = () => {
+    setCounter((prev) => prev - 2);
+  };
+
+  const decrement = () => {
+    setCounter((prev) => prev - 1);
+  };
+
+  const reset = () => {
+    setCounter(counter * 0);
+  };
 
   return (
     <>
@@ -9,13 +29,12 @@ const Counter = () => {
         <div className="mb-15">
           <p className="text-4xl text-white">{counter}</p>
         </div>
-        <div className="flex items-center justify-center gap-20">
-          <button className="h-10 w-40 text-[1.1rem] bg-green-500 text-white rounded-3xl shadow shadow-black cursor-pointer hover:bg-white hover:text-green-500 transition-all duration-500">
-            Increment
-          </button>
-          <button className="h-10 w-40 text-[1.1rem] bg-red-500 text-white rounded-3xl shadow shadow-black cursor-pointer hover:bg-white hover:text-red-500 transition-all duration-500">
-            Decrement
-          </button>
+        <div className="flex items-center justify-center gap-15">
+          <Button onClick={increment} text={"INCREMENT"} color={"green"} />
+          <Button onClick={decrement} text={"DECREMENT"} />
+          <Button onClick={increment2} text={"INCREMENT +2"} />
+          <Button onClick={decrement2} text={"DECREMENT -2"} />
+          <Button onClick={reset} text={"RESET"} />
         </div>
       </div>
     </>
