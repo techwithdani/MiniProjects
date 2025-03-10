@@ -7,6 +7,7 @@ const Counter = () => {
   const increment = () => {
     setCounter(counter + 1);
   };
+
   const increment2 = () => {
     setCounter(counter + 2);
   };
@@ -29,7 +30,7 @@ const Counter = () => {
         <div className="mb-15">
           <p className="text-4xl text-white">{counter}</p>
         </div>
-        <div className="flex items-center justify-center gap-15">
+        <div className="flex flex-col items-center justify-center gap-10 lg:flex-row">
           <Button onClick={increment} text={"INCREMENT"} color={"green"} />
           <Button onClick={decrement} text={"DECREMENT"} />
           <Button onClick={increment2} text={"INCREMENT +2"} />
