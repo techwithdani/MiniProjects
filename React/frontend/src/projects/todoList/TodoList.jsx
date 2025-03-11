@@ -31,7 +31,7 @@ const TodoList = () => {
               type="text"
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              className="w-60 h-10 bg-white rounded-2xl p-2 sm:w-120 md:w-160"
+              className="w-70 h-10 bg-white rounded-2xl p-2 sm:w-120 md:w-160"
             />
           </div>
           <div className="mt-20">
@@ -48,12 +48,14 @@ const TodoList = () => {
             {todos.map((todo) => (
               <li
                 key={todo.id}
-                className="w-auto h-15 rounded-2xl p-3 bg-white flex items-center justify-center gap-6"
+                className="w-auto h-auto rounded-2xl p-3 bg-white flex items-center justify-center gap-6 text-wrap"
               >
-                <p>{todo.text}</p>
+                <p className="w-70 break-words sm:w-120 md:w-160">
+                  {todo.text}
+                </p>
                 <button
                   onClick={() => deleteTodo(todo.id)}
-                  className="h-10 w-20 bg-black rounded-2xl text-red-800 cursor-pointer"
+                  className="h-10 w-20 bg-black rounded-2xl text-red-500 cursor-pointer"
                 >
                   Delete
                 </button>
