@@ -1,9 +1,9 @@
-import Toggle from "./projects/toggle/Toggle";
+import TodoList from "./projects/todoList/TodoList";
 
 function App() {
   return (
     <>
-      <Toggle />
+      <TodoList />
     </>
   );
 }
