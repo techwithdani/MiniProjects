@@ -1,9 +1,9 @@
-import TodoList from "./projects/todoList/TodoList";
+import SearchFilter from "./projects/searchFilter/SearchFilter";
 
 function App() {
   return (
     <>
-      <TodoList />
+      <SearchFilter />
     </>
   );
 }
