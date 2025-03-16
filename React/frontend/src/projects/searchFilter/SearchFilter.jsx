@@ -21,18 +21,17 @@ const SearchFilter = () => {
   return (
     <>
       <div className="w-full h-dvh bg-gray-800 flex justify-center items-center">
-        <div>
+        <div className="flex flex-col justify-center items-center gap-4">
+          <input
+            type="text"
+            value={search}
+            onChange={(e) => setSearch(e.target.value)}
+            className="w-70 h-10 bg-white rounded p-2"
+          />
           <div>
-            <input
-              type="text"
-              value={search}
-              onChange={(e) => setSearch(e.target.value)}
-            />
-          </div>
-          <div>
-            <ul>
+            <ul className="flex flex-col gap-3">
               {filteredItems.map((item) => (
-                <li>{item}</li>
+                <li className="w-70 h-10 bg-white p-2 rounded">{item}</li>
               ))}
             </ul>
           </div>
