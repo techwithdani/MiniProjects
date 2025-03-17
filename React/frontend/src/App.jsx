@@ -1,9 +1,9 @@
-import SearchFilter from "./projects/searchFilter/SearchFilter";
+import Form from "./projects/formValidation/Form";
 
 function App() {
   return (
     <>
-      <SearchFilter />
+      <Form />
     </>
   );
 }
